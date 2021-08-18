@@ -20,8 +20,11 @@
   },
   "homepage": "https://github.com/CETHER/react-siiges#readme",
   "dependencies": {
+    "file-loader": "^6.2.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
