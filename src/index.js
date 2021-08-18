@@ -7,8 +7,6 @@ import { createStore, compose } from 'redux';
 import reducer from './reducers';
 import App from './routes/App';
 
-ReactDOM.render(<Login />, document.getElementById('app'));
-
 const initialState = {
     "user": {}
 }

@@ -10,8 +10,9 @@ import backgroundImage1 from '../assets/static/wallpaper.jpg';
 const Login = props => {
 
     const [form, setValues] = useState({
-        email: '',
+        rol: '1',
     });
+    
     const handleInput = event => {
         setValues({
             ...form,
@@ -21,7 +22,8 @@ const Login = props => {
     const handleSubmit = event => {
         event.preventDefault();
         props.loginRequest(form);
-        props.history.push('/');
+        console.log(form);
+        //props.history.push('/');
     }
 
     return (
@@ -40,15 +42,15 @@ const Login = props => {
 
                                 <div className="input-group">
                                     <span className="input-group-addon btn-sm"><i className="glyphicon glyphicon-user"></i></span>
-                                    <input type="text" id="usuario" name="usuario" className="form-control input-sm" placeholder="Nombre de Usuario" required></input>
+                                    <input type="text" id="usuario" name="usuario" className="form-control input-sm" placeholder="Nombre de Usuario" onChange={handleInput} required />
                                 </div>
                                 <br />
                                 <div className="input-group">
                                     <span className="input-group-addon btn-sm"><i className="glyphicon glyphicon-lock"></i></span>
-                                    <input type="password" id="contrasena" name="contrasena" className="form-control input-sm" placeholder="Contraseña de acceso" required></input>
+                                    <input type="password" id="contrasena" name="contrasena" className="form-control input-sm" placeholder="Contraseña de acceso" onChange={handleInput} required />
                                 </div>
                                 <div className="input-group">
-                                    <input type="hidden" id="rol" name="rol" className="form-control input-sm" placeholder="Rol" required value="1"></input>
+                                    <input type="text" id="rol" name="rol" className="form-control" placeholder="Rol"  onChange={handleInput} required />
                                 </div>
                                 <p></p>
                                 <div className="form-group row">

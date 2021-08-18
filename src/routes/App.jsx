@@ -5,17 +5,13 @@ import Login from '../containers/Login';
 
 
 const App = () => (
-    <Provider>
-        <BrowserRouter>
-            <Layout>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/login" component={Login} />
-                    <Route exact path="/register" component={Register} />
-                </Switch>
-            </Layout>
-        </BrowserRouter>
-    </Provider>
+    <BrowserRouter>
+        <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            {/* <Route exact path="/register" component={Register} /> */}
+        </Switch>
+    </BrowserRouter>
 )
 
 export default App;
