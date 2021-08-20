@@ -7,3 +7,8 @@ export const loginRequest = payLoad => ({
     type: 'LOGIN_REQUEST',
     payLoad,
 });
+
+export const registerRequest = payLoad => ({
+    type: 'REGISTER_REQUEST',
+    payLoad,
+});

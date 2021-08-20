@@ -1,7 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import '../assets/styles/components/BarraInformacion.scss'
 
-const BarraInformacion = () => {
+const BarraInformacion = props => {
+    //Se guardan los datos del usuario en una constante
+    const { user } = props;
+
     return (
         <div className="container">
             <ol className="breadcrumb pull-left">
@@ -10,11 +14,17 @@ const BarraInformacion = () => {
             </ol>
             <ol className="breadcrumb pull-right">
                 <li><i className="icon icon-user"></i></li>
-                <li>Jefe de jefes</li>
-                <li className="active">Luis Manuel de Alba Villaseñor</li>
+                <li>{user.rolusuario}</li>
+                <li className="active">{user.nombreUsuario}</li>
             </ol>
         </div>
     )
 }
 
-export default BarraInformacion;
+const mapStateToProps = state => {
+    return {
+        user: state.user
+    };
+};
+
+export default connect(mapStateToProps, null)(BarraInformacion);

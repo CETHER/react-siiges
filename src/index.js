@@ -8,7 +8,9 @@ import reducer from './reducers';
 import App from './routes/App';
 
 const initialState = {
-    "user": {}
+    "user": {
+        "email": "topu@gmail.com",
+    }
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

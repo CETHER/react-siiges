@@ -1,4 +1,5 @@
 const reducer = (state, action) => {
+    console.log(state);
     switch (action.type) {
         case 'LOGIN_REQUEST':
             return {
@@ -9,8 +10,13 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 user:
-                state.user.find((item)=> item.id === Number(action.payLoad))
+                    state.user.find((item) => item.id === Number(action.payLoad))
             };
+        case 'REGISTER_REQUEST':
+            return {
+                ...state,
+                user: action.payLoad,
+            }
         default:
             return state;
     }
